@@ -7,3 +7,12 @@ function Car(make, speed) {
   this.speed = speed;
   }
   
+// Inheriting from 'Car'
+EV.prototype = Object.create(Car.prototype);
+EV.prototype.constructor = EV;
+
+// 'chargeBattery' method
+EV.prototype.chargeBattery = function(chargeTo) {
+  this.charge = chargeTo;
+  console.log(`${this.make} charged to ${chargeTo}%`);
+};
