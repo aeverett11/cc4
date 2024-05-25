@@ -23,3 +23,10 @@ EV.prototype.accelerate = function() {
   console.log(`${this.make} going at ${this.speed} km/h with a charge of ${this.charge}%`);
 };
 
+// Test data
+const tesla = new EV('Tesla', 120, 23);
+
+// Experiment with methods
+tesla.accelerate(); // Output: Tesla going at 140 km/h with a charge of 22%
+tesla.chargeBattery(90); // Output: Tesla charged to 90%
+tesla.accelerate(); // Output: Tesla going at 160 km/h with a charge of 89%
